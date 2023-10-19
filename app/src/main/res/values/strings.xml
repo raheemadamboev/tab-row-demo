@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TabRowDemo</string>
+
+    <!-- Main -->
+    <string name="home">Home</string>
+    <string name="chat">Chat</string>
+    <string name="settings">Settings</string>
 </resources>
