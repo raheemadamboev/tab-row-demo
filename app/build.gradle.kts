@@ -59,7 +59,6 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.material:material-icons-extended")
 
     // compose activity
     implementation("androidx.activity:activity-compose:1.8.0")
@@ -69,4 +68,14 @@ dependencies {
 
     // core
     implementation("androidx.core:core-ktx:1.12.0")
+}
+
+allprojects {
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class).all {
+        kotlinOptions {
+            freeCompilerArgs += listOf(
+                "-opt-in=androidx.compose.foundation.ExperimentalFoundationApi"
+            )
+        }
+    }
 }
